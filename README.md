@@ -1,6 +1,7 @@
 # moonshape_subpopulation
 
-- code for paper *On the nonlinear correlation of ML performance between data subpopulations*
+- code for paper  **On the nonlinear correlation of ML performance between data subpopulations**
+![](figures/figure2.png)
 
 ## Requirements
 - mxnet >= 1.7.0
