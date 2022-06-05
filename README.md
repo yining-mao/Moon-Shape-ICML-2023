@@ -1,9 +1,11 @@
 # moonshape_subpopulation
 
 - code for paper  **On the nonlinear correlation of ML performance between data subpopulations**
-![](figures/figure2.png)
+
+![](figures/figure2.png "Majority subpopulation accuracies vs. minority subpopulation accuracies for each dataset")
 
 ## Requirements
+Our implementation framework is based on [MXNet](https://mxnet.apache.org/) and [AutoGluon](https://auto.gluon.ai/stable/index.html).
 - mxnet >= 1.7.0
 - torch >= 1.10.1
 - torchvision >= 0.11.2
@@ -11,18 +13,23 @@
 - gluoncv
 
 ## Datasets
-We implement 5 subpopulation shift datasets with 6 settings (2 versions for Modified-CIFAR4). To see the dataset samples and prepare the data, run the jupyter notebook in corresponding dataset folder in `datasets/`.
+We implement 5 subpopulation shift datasets with 6 settings (2 versions for Modified-CIFAR4). 
+#### Download the data
 - For Metashift [[GoogleDrive]](https://drive.google.com/file/d/1P2kvXa_erLVHBqL_0RDe5HLmpnA1rz2I/view?usp=sharing), PACS [[GoogleDrive]](https://drive.google.com/uc?id=1JFr8f805nMUelQWWmfnJR3y4_SYoN5Pd), OfficeHome [[GoogleDrive]](https://drive.google.com/file/d/0B81rNlvomiwed0V1YUxQdC1uOTg/view?usp=sharing&resourcekey=0-2SNWq0CDAuWOBRRBL7ZZsw), data needs to be downloaded to corresponding dataset folders in `datasets/`;
-- For Waterbirds, install WILDS using pip: `pip install wilds`;
+- For Waterbirds, install [WILDS](https://wilds.stanford.edu/datasets/) using pip: `pip install wilds` and download data with code;
 - For Modified-CIFAR4, CIFAR10 dataset will be downloaded first with torchvision.
-
-For example, if you want to prepare Metashift dataset, you can open `datasets/metashift/metashift_prepare.ipynb` and run the code. In each dataset preparation notebook, you can change the `ROOT_PATH` and `EXP_ROOT_PATH` in the first code cell. The prepared data will be saved in `EXP_ROOT_PATH/data` in [Pytorch Image Folder](https://pytorch.org/vision/main/generated/torchvision.datasets.ImageFolder.html) Format:
-- Training data in `EXP_ROOT_PATH/data/train`
-- Validation data in `EXP_ROOT_PATH/data/majority-val` and `EXP_ROOT_PATH/data/minority-val`
+#### Prepare the data
+- To see the dataset samples and prepare the data, run the jupyter notebook in corresponding dataset folder in `datasets/`. For example, Metashift dataset preparation code is in `datasets/metashift/metashift_prepare.ipynb`.
+- In each dataset preparation notebook, you can change the `ROOT_PATH` and `EXP_ROOT_PATH` in the first code cell. 
+    - `ROOT_PATH`: downloaded dataset root path
+    - `EXP_ROOT_PATH`: experiment root path 
+- The prepared data will be saved in `EXP_ROOT_PATH/data` in [Pytorch Image Folder](https://pytorch.org/vision/main/generated/torchvision.datasets.ImageFolder.html) Format:
+    - Training data in `EXP_ROOT_PATH/data/train`;
+    - Validation data in `EXP_ROOT_PATH/data/majority-val` and `EXP_ROOT_PATH/data/minority-val`.
 
 ## Training Process
-Following the search space of AutoGluon and train 500 different ML models with varying configurations.
-Here for each dataset, we implement with e 5 model architectures, 5 learning rates, 5 batch sizes, and 4 training durations:
+Train 500 different ML models with varying configurations following the search space of [AutoGluon](https://auto.gluon.ai/stable/index.html).
+Here for each dataset, we implement with 5 model architectures, 5 learning rates, 5 batch sizes, and 4 training durations:
 ```
 @ag.args( # 5 models * 5 lr * 5 batch_size * 4 epochs = 500 configurations
     model = ag.space.Categorical(
@@ -39,6 +46,7 @@ Here for each dataset, we implement with e 5 model architectures, 5 learning rat
 ```
 
 Specify the experiment directory, and you can train the models.
+
 For example, if you prepare and save the data in `experiments/metashift/data`, run:
 ```
 python main.py --exp-dir experiments/metashift
