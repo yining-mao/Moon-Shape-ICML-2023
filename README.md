@@ -26,7 +26,7 @@ We implement 5 subpopulation shift datasets with 6 settings (2 versions for Modi
 - To see the dataset samples and prepare the data, run the jupyter notebook in corresponding dataset folder in `datasets/`. For example, Metashift dataset preparation code is in `datasets/metashift/metashift_prepare.ipynb`.
 - In each dataset preparation notebook, you can change the `ROOT_PATH` and `EXP_ROOT_PATH` in the first code cell. 
     - `ROOT_PATH`: downloaded dataset root path
-    - `EXP_ROOT_PATH`: experiment root path 
+    - `EXP_ROOT_PATH`: experiment root path, default to `experiments/DATASET_NAME`
 - The prepared data will be saved in `EXP_ROOT_PATH/data` in [Pytorch Image Folder](https://pytorch.org/vision/main/generated/torchvision.datasets.ImageFolder.html) Format:
     - Training data in `EXP_ROOT_PATH/data/train`;
     - Validation data in `EXP_ROOT_PATH/data/majority-val` and `EXP_ROOT_PATH/data/minority-val`.
