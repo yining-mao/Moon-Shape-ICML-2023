@@ -7,7 +7,7 @@
 ## Requirements
 Our implementation framework is based on [MXNet](https://mxnet.apache.org/) and [AutoGluon](https://auto.gluon.ai/stable/index.html).
 - mxnet >= 1.7.0
-- torch >= 1.10.1
+- pytorch >= 1.10.1
 - torchvision >= 0.11.2
 - autogluon
 - gluoncv
@@ -34,7 +34,7 @@ We implement 5 subpopulation shift datasets with 6 settings (2 versions for Modi
 ## Training Process
 Train 500 different ML models with varying configurations following the search space of [AutoGluon](https://auto.gluon.ai/stable/index.html).
 Here for each dataset, we implement with 5 model architectures, 5 learning rates, 5 batch sizes, and 4 training durations:
-```
+```python
 @ag.args( # 5 models * 5 lr * 5 batch_size * 4 epochs = 500 configurations
     model = ag.space.Categorical(
         'mobilenetv3_small', 
@@ -52,7 +52,7 @@ Here for each dataset, we implement with 5 model architectures, 5 learning rates
 Specify the experiment directory, and you can train the models.
 
 For example, if you prepare and save the data in `experiments/metashift/data`, run:
-```
+```bash
 python main.py --exp-dir experiments/metashift
 ```
 and you will get the following results in `experiments/metashift/result`:
