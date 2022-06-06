@@ -14,10 +14,14 @@ Our implementation framework is based on [MXNet](https://mxnet.apache.org/) and 
 
 ## Datasets
 We implement 5 subpopulation shift datasets with 6 settings (2 versions for Modified-CIFAR4). 
+- Spurious correlation datasets: MetaShift, Waterbirds, Modified-CIFAR4 V1
+- Rare subpopulation datasets: PACS, OfficeHome, Modified-CIFAR4 V2
+
 #### Download the data
-- For Metashift [[GoogleDrive]](https://drive.google.com/file/d/1P2kvXa_erLVHBqL_0RDe5HLmpnA1rz2I/view?usp=sharing), PACS [[GoogleDrive]](https://drive.google.com/uc?id=1JFr8f805nMUelQWWmfnJR3y4_SYoN5Pd), OfficeHome [[GoogleDrive]](https://drive.google.com/file/d/0B81rNlvomiwed0V1YUxQdC1uOTg/view?usp=sharing&resourcekey=0-2SNWq0CDAuWOBRRBL7ZZsw), data needs to be downloaded to corresponding dataset folders in `datasets/`;
+- For MetaShift [[GoogleDrive]](https://drive.google.com/file/d/1P2kvXa_erLVHBqL_0RDe5HLmpnA1rz2I/view?usp=sharing), PACS [[GoogleDrive]](https://drive.google.com/uc?id=1JFr8f805nMUelQWWmfnJR3y4_SYoN5Pd), OfficeHome [[GoogleDrive]](https://drive.google.com/file/d/0B81rNlvomiwed0V1YUxQdC1uOTg/view?usp=sharing&resourcekey=0-2SNWq0CDAuWOBRRBL7ZZsw), data needs to be downloaded to corresponding dataset folders in `datasets/`;
 - For Waterbirds, install [WILDS](https://wilds.stanford.edu/datasets/) using pip: `pip install wilds` and download data with code;
-- For Modified-CIFAR4, CIFAR10 dataset will be downloaded first with torchvision.
+- For Modified-CIFAR4, CIFAR10 dataset will first be downloaded with torchvision.
+
 #### Prepare the data
 - To see the dataset samples and prepare the data, run the jupyter notebook in corresponding dataset folder in `datasets/`. For example, Metashift dataset preparation code is in `datasets/metashift/metashift_prepare.ipynb`.
 - In each dataset preparation notebook, you can change the `ROOT_PATH` and `EXP_ROOT_PATH` in the first code cell. 
