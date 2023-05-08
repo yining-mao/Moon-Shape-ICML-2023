@@ -3,7 +3,7 @@
 # Overview
 - code for paper  **On the nonlinear correlation of ML performance between data subpopulations**
 
-![](figures/figure2.png "Majority subpopulation accuracies vs. minority subpopulation accuracies for each dataset")
+![](figures/figure2.jpg "Majority subpopulation accuracies vs. minority subpopulation accuracies for each dataset")
 
 
 # Get Started
@@ -69,7 +69,7 @@ If you found this code/work to be useful in your own research, please considerin
 
 ```
 @inproceedings{liang2022nonlinear,
-  title={On the nonlinear correlation of ML performance across data subpopulations},
+  title={On the nonlinear correlation of ML performance betweem data subpopulations},
   author={Liang, Weixin and Mao, Yining and Kwon, Yongchan and Yang, Xinyu and Zou, James},
   booktitle={ICML},
   year={2023}
