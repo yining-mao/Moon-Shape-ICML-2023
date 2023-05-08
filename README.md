@@ -1,8 +1,12 @@
-# moonshape_subpopulation
+# On the nonlinear correlation of ML performance between data subpopulations （ICML 2023)
 
+# Overview
 - code for paper  **On the nonlinear correlation of ML performance between data subpopulations**
 
 ![](figures/figure2.png "Majority subpopulation accuracies vs. minority subpopulation accuracies for each dataset")
+
+
+# Get Started
 
 ## Requirements
 Our implementation framework is based on [MXNet](https://mxnet.apache.org/) and [AutoGluon](https://auto.gluon.ai/stable/index.html).
@@ -58,3 +62,16 @@ python main.py --exp-dir experiments/metashift
 and you will get the following results in `experiments/metashift/result`:
 - A table with evaluation results of each configuration,
 - A 'majority subpopulation accuracy vs. minority subpopulation accuracy' plot corresponding to the table.
+
+# Reference
+
+If you found this code/work to be useful in your own research, please considering citing the following:
+
+```
+@inproceedings{liang2022nonlinear,
+  title={On the nonlinear correlation of ML performance across data subpopulations},
+  author={Liang, Weixin and Mao, Yining and Kwon, Yongchan and Yang, Xinyu and Zou, James},
+  booktitle={ICML},
+  year={2023}
+}
+```
