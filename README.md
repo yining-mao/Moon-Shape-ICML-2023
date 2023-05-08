@@ -3,7 +3,7 @@
 # Overview
 - code for paper  **On the nonlinear correlation of ML performance between data subpopulations**
 
-![](figures/figure2.jpg "Majority subpopulation accuracies vs. minority subpopulation accuracies for each dataset")
+<img src="figures/figure2.jpg" alt="Majority subpopulation accuracies vs. minority subpopulation accuracies for each dataset" style="width:50%;">
 
 
 # Get Started
