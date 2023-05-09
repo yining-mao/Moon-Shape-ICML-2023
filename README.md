@@ -19,21 +19,26 @@ This repo provides the PyTorch source code of our paper:
 
 ## Introduction
 
-<div style="display: flex; flex-wrap: wrap;">
-  <div style="width: 20%;">
-    <img src="figures/intro.jpg" alt="" style="width:20%;">
-  </div>
-  <div style="width: 80%;">
-    <p>Subpopulation shift is a major challenge in ML: test data often have different distribution across subgroups (e.g. different types of users or patients) compared to the training data. Recent works find a strong linear relationship between ID and OOD performance on dataset reconstruction shifts; In contrast, we empirically show that they have a nonlinear correlation under subpopulation shifts.</p>
-  </div>
-</div>
+<img src="figures/intro.jpg" alt="" style="width:20%;">
+
+**Subpopulation shift** is a major challenge in ML: test data often have different distribution across subgroups (e.g. different types of users or patients) compared to the training data. Recent works find a strong **linear relationship** between ID and OOD performance on dataset reconstruction shifts; In contrast, we empirically show that they have a **nonlinear correlation** under subpopulation shifts.</p>
 
 
 ## What is the moonshape phenomenon?
 
-<img src="figures/figure2.jpg" alt="Majority subpopulation accuracies vs. minority subpopulation accuracies for each dataset" style="width:50%;">
+<img src="figures/figure2_1.jpg" title="" style="width:70%;">
+
+**The “moon shape” phenomenon is a nonlinear correlation (parabolic uptrend curve) between the test performance on the majority subpopulation and the minority subpopulation.** We decompose the model’s performance into separate evaluations on the majority and minority subpopulations of the OOD test set, and evaluate under two dataset configurations.  **Top (a-c):** Results of datasets with spurious correlation show a pronounced nonlinearity; **Bottom (d-f):** Results of datasets without spurious correlation exhibit more subtle nonlinearity.
 
 ## Why is it not obvious?
+<img src="figures/figure3.jpg" title="" style="width:30%;">
+Why the moon shape is not obvious: Mixture of models can fill in the moon shape.
+
+## The Impact of Spurious Correlation on the Moon Shape
+
+<img src="figures/figure4.jpg" title="" style="width:80%;">
+
+**Stronger spurious correlation creates more nonlinear performance correlation.**
 
 See our [paper](https://arxiv.org/pdf/2305.02995.pdf) for details!
 
