@@ -1,7 +1,21 @@
-# On the nonlinear correlation of ML performance between data subpopulations （ICML 2023)
+# On the nonlinear correlation of ML performance between data subpopulations（ICML 2023)
+
+[![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://moonshape.readthedocs.io)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+[![OpenReview](https://img.shields.io/badge/OpenReview-S7Evzt9uit3.svg)](https://openreview.net/forum?id=oRkZj3Bju2)
+[![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
+[![Pytorch](https://img.shields.io/badge/Pytorch-1.8-red.svg)](https://shields.io/)
+[![Made with Jupyter](https://img.shields.io/badge/Made%20with-Jupyter-orange?style=for-the-badge&style=flat&logo=Jupyter)](https://jupyter.org/try)
+
+This repo provides the PyTorch source code of our paper: 
+> [On the nonlinear correlation of ML performance between data subpopulations](https://openreview.net/forum?id=oRkZj3Bju2) <br>
+> Weixin Liang*, Yining Mao*, Yongchan Kwon*, Xinyu Yang, James Zou  <br> 
+> ICML (2023) 
+
+
 
 # Overview
-- code for paper  **On the nonlinear correlation of ML performance between data subpopulations**
+- 
 
 <img src="figures/figure2.jpg" alt="Majority subpopulation accuracies vs. minority subpopulation accuracies for each dataset" style="width:50%;">
 
