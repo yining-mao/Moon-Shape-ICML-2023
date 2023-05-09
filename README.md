@@ -15,10 +15,19 @@ This repo provides the PyTorch source code of our paper:
 
 
 # Overview
-TL;DR: We show that there is a “moon shape” correlation (parabolic uptrend curve) between the test performance on the majority subpopulation and the minority subpopulation. This nonlinear correlations hold across model architectures, training settings, datasets, and the imbalance between subpopulations.
+**TL;DR:** We show that there is a “moon shape” correlation (parabolic uptrend curve) between the test performance on the majority subpopulation and the minority subpopulation. This nonlinear correlations hold across model architectures, training settings, datasets, and the imbalance between subpopulations.
 
 ## Introduction
-Subpopulation shift is a major challenge in ML: test data often have different distribution across subgroups (e.g. different types of users or patients) compared to the training data. Recent works find a strong linear relationship between ID and OOD performance on dataset reconstruction shifts; In contrast, we empirically show that they have a nonlinear correlation under subpopulation shifts.
+
+<div style="display: flex; flex-wrap: wrap;">
+  <div style="width: 20%;">
+    <img src="figures/intro.jpg" alt="" style="width:20%;">
+  </div>
+  <div style="width: 80%;">
+    <p>Subpopulation shift is a major challenge in ML: test data often have different distribution across subgroups (e.g. different types of users or patients) compared to the training data. Recent works find a strong linear relationship between ID and OOD performance on dataset reconstruction shifts; In contrast, we empirically show that they have a nonlinear correlation under subpopulation shifts.</p>
+  </div>
+</div>
+
 
 ## What is the moonshape phenomenon?
 
